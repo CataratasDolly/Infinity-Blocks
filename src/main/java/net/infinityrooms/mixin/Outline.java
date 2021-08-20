@@ -32,7 +32,8 @@ public class Outline {
         if (lookingAt == InfinityWhite || lookingAt == InfinityOrange || lookingAt == InfinityMagenta || lookingAt == InfinityLightBlue ||
             lookingAt == InfinityYellow || lookingAt == InfinityLime || lookingAt == InfinityPink || lookingAt == InfinityGray ||
             lookingAt == InfinityLightGray || lookingAt == InfinityCyan || lookingAt == InfinityPurple || lookingAt == InfinityBlue ||
-            lookingAt == InfinityBrown || lookingAt == InfinityGreen || lookingAt == InfinityRed || lookingAt == InfinityBlack) {
+            lookingAt == InfinityBrown || lookingAt == InfinityGreen || lookingAt == InfinityRed || lookingAt == InfinityBlack ||
+            lookingAt == InfinityStars) {
             VertexConsumer buffer = bufferBuilders.getEntityVertexConsumers().getBuffer(InvisibleLine);
             args.set(1, buffer);
         }

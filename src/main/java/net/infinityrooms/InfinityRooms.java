@@ -4,8 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -30,6 +29,7 @@ public class InfinityRooms implements ModInitializer {
     public static final Block InfinityGreen = block();
     public static final Block InfinityRed = block();
     public static final Block InfinityBlack = block();
+    public static final Block InfinityStars = block();
 
     public static final ItemGroup INFINITY_GROUP = FabricItemGroupBuilder.build(
             new Identifier("infinityrooms", "infinityblocks"),
@@ -63,6 +63,6 @@ public class InfinityRooms implements ModInitializer {
         register("infinity_green", InfinityGreen);
         register("infinity_red", InfinityRed);
         register("infinity_black", InfinityBlack);
-
+        register("infinity_stars", InfinityStars);
     }
 }
