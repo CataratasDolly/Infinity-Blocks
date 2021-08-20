@@ -4,7 +4,7 @@
   "package": "net.infinityrooms.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "Outline"
+    "NoOutline"
   ],
   "client": [
   ],
