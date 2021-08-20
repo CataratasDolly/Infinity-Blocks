@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "infinityrooms:block/infinity_light_blue"
+  }
+}

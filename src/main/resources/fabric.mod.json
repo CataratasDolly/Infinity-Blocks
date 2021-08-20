@@ -1,17 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "InfinityRooms",
+  "id": "infinityrooms",
   "version": "${version}",
   "name": "Infinity Rooms",
   "description": "",
   "authors": [
     "CataratasDolly"
   ],
-  "contact": {
-    "repo": "https://github.com/CataratasDolly/Infinity-Rooms.git"
-  },
   "license": "MIT",
-  "icon": "assets/InfinityRooms/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
