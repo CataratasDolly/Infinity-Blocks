@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "infinityrooms:block/infinity_black" }
+    "": { "model": "infinityrooms:block/infinity_black_model" }
   }
 }

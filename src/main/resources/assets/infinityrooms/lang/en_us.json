@@ -1,5 +1,5 @@
 {
-  "itemGroup.infinityrooms.infintyblocks": "Infinity Blocks",
+  "itemGroup.infinityrooms.infinityblocks": "Infinity Blocks",
   "block.infinityrooms.infinity_white": "Infinity White",
   "block.infinityrooms.infinity_orange": "Infinity Orange",
   "block.infinityrooms.infinity_magenta": "Infinity Magenta",
@@ -15,6 +15,5 @@
   "block.infinityrooms.infinity_brown": "Infinity Brown",
   "block.infinityrooms.infinity_green": "Infinity Green",
   "block.infinityrooms.infinity_red": "Infinity Red",
-  "block.infinityrooms.infinity_black": "Infinity Black",
-  "block.infinityrooms.infinity_stars": "Infinity Stars"
+  "block.infinityrooms.infinity_black": "Infinity Black"
 }
