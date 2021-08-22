@@ -26,18 +26,18 @@ public class NoOutline {
     @Inject(method = "shouldRenderBlockOutline", at = @At(value = "HEAD", target = "Lnet/minecraft/client/render/GameRenderer;shouldRenderBlockOutline()Z"), cancellable = true)
     public void shouldRenderBlockOutline(CallbackInfoReturnable<Boolean> cir) {
         HitResult hitResult = this.client.crosshairTarget;
-        assert hitResult != null;
-        BlockPos blockPos = ((BlockHitResult)hitResult).getBlockPos();
-        assert this.client.world != null;
-        BlockState blockState = this.client.world.getBlockState(blockPos);
-        Block lookingAt = blockState.getBlock();
+        if (hitResult != null && hitResult.getType() == HitResult.Type.BLOCK) {
+            BlockPos blockPos = ((BlockHitResult) hitResult).getBlockPos();
+            assert this.client.world != null;
+            BlockState blockState = this.client.world.getBlockState(blockPos);
+            Block lookingAt = blockState.getBlock();
 
-        if (lookingAt == InfinityWhite || lookingAt == InfinityOrange || lookingAt == InfinityMagenta || lookingAt == InfinityLightBlue ||
-                lookingAt == InfinityYellow || lookingAt == InfinityLime || lookingAt == InfinityPink || lookingAt == InfinityGray ||
-                lookingAt == InfinityLightGray || lookingAt == InfinityCyan || lookingAt == InfinityPurple || lookingAt == InfinityBlue ||
-                lookingAt == InfinityBrown || lookingAt == InfinityGreen || lookingAt == InfinityRed || lookingAt == InfinityBlack ||
-                lookingAt == InfinityStars) {
-            cir.setReturnValue(false);
+            if (lookingAt == InfinityWhite || lookingAt == InfinityOrange || lookingAt == InfinityMagenta || lookingAt == InfinityLightBlue ||
+                    lookingAt == InfinityYellow || lookingAt == InfinityLime || lookingAt == InfinityPink || lookingAt == InfinityGray ||
+                    lookingAt == InfinityLightGray || lookingAt == InfinityCyan || lookingAt == InfinityPurple || lookingAt == InfinityBlue ||
+                    lookingAt == InfinityBrown || lookingAt == InfinityGreen || lookingAt == InfinityRed || lookingAt == InfinityBlack) {
+                cir.setReturnValue(false);
+            }
         }
     }
 }
