@@ -56,8 +56,6 @@ public class ModelProvider implements ModelResourceProvider {
             return new GreenModel();
         } else if (identifier.equals(MODEL_RED)) {
             return new RedModel();
-        } else if (identifier.equals(MODEL_BLACK)) {
-            return new BlackModel();
         } else {
             return null;
         }
