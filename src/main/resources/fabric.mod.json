@@ -9,6 +9,7 @@
   ],
   "license": "MIT",
   "environment": "*",
+  "icon": "icon.png",
   "entrypoints": {
     "client": [
       "net.infinityrooms.client.InfinityRoomsClient"
