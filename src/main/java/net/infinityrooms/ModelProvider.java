@@ -22,7 +22,6 @@ public class ModelProvider implements ModelResourceProvider {
     public static final Identifier MODEL_BROWN = new Identifier("infinityrooms:block/infinity_brown_model");
     public static final Identifier MODEL_GREEN = new Identifier("infinityrooms:block/infinity_green_model");
     public static final Identifier MODEL_RED = new Identifier("infinityrooms:block/infinity_red_model");
-    public static final Identifier MODEL_BLACK = new Identifier("infinityrooms:block/infinity_black_model");
 
     @Override
     public UnbakedModel loadModelResource(Identifier identifier, ModelProviderContext modelProviderContext) {
