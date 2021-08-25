@@ -2,7 +2,7 @@ package net.infinityrooms;
 
 import net.fabricmc.fabric.api.client.model.ModelProviderContext;
 import net.fabricmc.fabric.api.client.model.ModelResourceProvider;
-import net.infinityrooms.models.*;
+import net.infinityrooms.models.BlockModel;
 import net.minecraft.client.render.model.UnbakedModel;
 import net.minecraft.util.Identifier;
 
@@ -26,35 +26,35 @@ public class ModelProvider implements ModelResourceProvider {
     @Override
     public UnbakedModel loadModelResource(Identifier identifier, ModelProviderContext modelProviderContext) {
         if(identifier.equals(MODEL_WHITE)) {
-            return new WhiteModel();
+            return new BlockModel("white");
         } else if (identifier.equals(MODEL_ORANGE)) {
-            return new OrangeModel();
+            return new BlockModel("orange");
         } else if (identifier.equals(MODEL_MAGENTA)) {
-            return new MagentaModel();
+            return new BlockModel("magenta");
         } else if (identifier.equals(MODEL_LIGHT_BLUE)) {
-            return new LightBlueModel();
+            return new BlockModel("light_blue");
         } else if (identifier.equals(MODEL_YELLOW)) {
-            return new YellowModel();
+            return new BlockModel("yellow");
         } else if (identifier.equals(MODEL_LIME)) {
-            return new LimeModel();
+            return new BlockModel("lime");
         } else if (identifier.equals(MODEL_PINK)) {
-            return new PinkModel();
+            return new BlockModel("pink");
         } else if (identifier.equals(MODEL_GRAY)) {
-            return new GrayModel();
+            return new BlockModel("gray");
         } else if (identifier.equals(MODEL_LIGHT_GRAY)) {
-            return new LightGrayModel();
+            return new BlockModel("light_gray");
         } else if (identifier.equals(MODEL_CYAN)) {
-            return new CyanModel();
+            return new BlockModel("cyan");
         } else if (identifier.equals(MODEL_PURPLE)) {
-            return new PurpleModel();
+            return new BlockModel("purple");
         } else if (identifier.equals(MODEL_BLUE)) {
-            return new BlueModel();
+            return new BlockModel("blue");
         } else if (identifier.equals(MODEL_BROWN)) {
-            return new BrownModel();
+            return new BlockModel("brown");
         } else if (identifier.equals(MODEL_GREEN)) {
-            return new GreenModel();
+            return new BlockModel("green");
         } else if (identifier.equals(MODEL_RED)) {
-            return new RedModel();
+            return new BlockModel("red");
         } else {
             return null;
         }
