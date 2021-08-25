@@ -27,11 +27,15 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public class LightBlueModel implements UnbakedModel, BakedModel, FabricBakedModel {
+public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
 
-    private static final SpriteIdentifier[] SPRITE_IDS = new SpriteIdentifier[]{
-            new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier("infinityrooms:block/infinity_light_blue"))
-    };
+    protected SpriteIdentifier[] SPRITE_IDS;
+
+    public BlockModel(String color) {
+        this.SPRITE_IDS = new SpriteIdentifier[] {
+                new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier("infinityrooms:block/infinity_" + color))
+        };
+    }
 
     private final Sprite[] SPRITES = new Sprite[1];
     private Mesh mesh;
@@ -120,6 +124,5 @@ public class LightBlueModel implements UnbakedModel, BakedModel, FabricBakedMode
 
     @Override
     public void emitItemQuads(ItemStack itemStack, Supplier<Random> supplier, RenderContext renderContext) {
-
     }
 }
