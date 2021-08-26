@@ -51,11 +51,6 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
     }
 
     @Override
-    public Sprite getParticleSprite() {
-        return SPRITES[0];
-    }
-
-    @Override
     public BakedModel bake(ModelLoader loader, Function<SpriteIdentifier, Sprite> textureGetter, ModelBakeSettings rotationContainer, Identifier modelId) {
         SPRITES[0] = textureGetter.apply(SPRITE_IDS[0]);
         Renderer renderer = RendererAccess.INSTANCE.getRenderer();
@@ -129,6 +124,5 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
 
     @Override
     public void emitItemQuads(ItemStack itemStack, Supplier<Random> supplier, RenderContext renderContext) {
-
     }
 }
