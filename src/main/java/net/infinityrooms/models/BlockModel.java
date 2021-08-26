@@ -12,6 +12,7 @@ import net.fabricmc.fabric.api.renderer.v1.model.FabricBakedModel;
 import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.render.model.*;
+import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import net.minecraft.client.render.model.json.ModelOverrideList;
 import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.texture.Sprite;
@@ -30,19 +31,19 @@ import java.util.function.Supplier;
 public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
 
     protected SpriteIdentifier[] SPRITE_IDS;
+    protected final Sprite[] SPRITES = new Sprite[1];
+    protected Mesh mesh;
+    protected ModelTransformation transformation;
+    protected Identifier DefaultModel = new Identifier("minecraft:block/block");
 
     public BlockModel(String color) {
         this.SPRITE_IDS = new SpriteIdentifier[] {
-                new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier("infinityrooms:block/infinity_" + color))
+                new SpriteIdentifier(SpriteAtlasTexture.BLOCK_ATLAS_TEXTURE, new Identifier("infinityrooms:block/endless_" + color))
         };
     }
 
-    private final Sprite[] SPRITES = new Sprite[1];
-    private Mesh mesh;
-
-    @Override
     public Collection<Identifier> getModelDependencies() {
-        return Collections.emptyList();
+        return Collections.singletonList(DefaultModel);
     }
 
     @Override
@@ -52,13 +53,15 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
 
     @Override
     public BakedModel bake(ModelLoader loader, Function<SpriteIdentifier, Sprite> textureGetter, ModelBakeSettings rotationContainer, Identifier modelId) {
+        JsonUnbakedModel defaultBlockModel = (JsonUnbakedModel) loader.getOrLoadModel(DefaultModel);
+        transformation = defaultBlockModel.getTransformations();
+
         SPRITES[0] = textureGetter.apply(SPRITE_IDS[0]);
         Renderer renderer = RendererAccess.INSTANCE.getRenderer();
 
         assert renderer != null;
         MeshBuilder builder = renderer.meshBuilder();
-        RenderMaterial myMaterial = renderer.materialFinder().disableDiffuse(0, true)
-                .disableColorIndex(0, true).disableAo(0, true).emissive(0, true).find();
+        RenderMaterial myMaterial = renderer.materialFinder().disableDiffuse(0, true).find();
         QuadEmitter emitter = builder.getEmitter();
 
         for(Direction direction : Direction.values()) {
@@ -99,17 +102,17 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
 
     @Override
     public boolean isSideLit() {
-        return false;
+        return true;
     }
 
     @Override
     public ModelTransformation getTransformation() {
-        return null;
+        return transformation;
     }
 
     @Override
     public ModelOverrideList getOverrides() {
-        return null;
+        return ModelOverrideList.EMPTY;
     }
 
     @Override
@@ -124,5 +127,6 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
 
     @Override
     public void emitItemQuads(ItemStack itemStack, Supplier<Random> supplier, RenderContext renderContext) {
+        renderContext.meshConsumer().accept(mesh);
     }
 }
