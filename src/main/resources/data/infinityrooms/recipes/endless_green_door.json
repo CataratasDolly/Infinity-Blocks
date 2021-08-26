@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "infinityrooms:endless_green"
+    }
+  },
+  "result": {
+    "item": "infinityrooms:endless_green_door",
+    "count": 3
+  }
+}
