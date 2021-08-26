@@ -93,6 +93,11 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
     }
 
     @Override
+    public Sprite getParticleSprite() {
+        return SPRITES[0];
+    }
+
+    @Override
     public boolean hasDepth() {
         return false;
     }

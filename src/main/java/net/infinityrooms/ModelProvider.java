@@ -3,6 +3,7 @@ package net.infinityrooms;
 import net.fabricmc.fabric.api.client.model.ModelProviderContext;
 import net.fabricmc.fabric.api.client.model.ModelResourceProvider;
 import net.infinityrooms.models.BlockModel;
+import net.infinityrooms.models.DoorModel;
 import net.minecraft.client.render.model.UnbakedModel;
 import net.minecraft.util.Identifier;
 
