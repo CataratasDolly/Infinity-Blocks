@@ -74,7 +74,7 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
 
     @Override
     public List<BakedQuad> getQuads(BlockState state, Direction face, Random random) {
-        return null;
+        return Collections.emptyList();
     }
 
     @Override
