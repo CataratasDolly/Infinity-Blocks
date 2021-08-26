@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "infinityrooms:item/endless_purple_door"
+  }
+}

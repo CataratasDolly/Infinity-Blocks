@@ -16,11 +16,17 @@ public class ModelProvider implements ModelResourceProvider {
         colors.add("white"); colors.add("orange"); colors.add("magenta"); colors.add("light_blue");
         colors.add("yellow"); colors.add("lime"); colors.add("pink"); colors.add("gray");
         colors.add("light_gray"); colors.add("cyan"); colors.add("purple"); colors.add("blue");
-        colors.add("brown"); colors.add("green"); colors.add("red");
+        colors.add("brown"); colors.add("green"); colors.add("red"); colors.add("black");
 
-        for (int i = 0; i < 15; i++) {
-            if (identifier.equals(new Identifier("infinityrooms:block/infinity_" + colors.get(i) + "_model"))) {
+        for (int i = 0; i < 16; i++) {
+            if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_model")) ||
+            identifier.equals(new Identifier("infinityrooms:item/endless_" + colors.get(i)))) {
                 return new BlockModel(colors.get(i));
+            }
+        }
+        for (int i = 0; i < 16; i++) {
+            if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_door_model"))) {
+                return new DoorModel(colors.get(i));
             }
         }
         return null;

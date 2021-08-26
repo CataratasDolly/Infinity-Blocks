@@ -13,53 +13,89 @@ import net.minecraft.util.registry.Registry;
 
 public class InfinityRooms implements ModInitializer {
 
-    public static final Block InfinityWhite = block();
-    public static final Block InfinityOrange = block();
-    public static final Block InfinityMagenta = block();
-    public static final Block InfinityLightBlue = block();
-    public static final Block InfinityYellow = block();
-    public static final Block InfinityLime = block();
-    public static final Block InfinityPink = block();
-    public static final Block InfinityGray = block();
-    public static final Block InfinityLightGray = block();
-    public static final Block InfinityCyan = block();
-    public static final Block InfinityPurple = block();
-    public static final Block InfinityBlue = block();
-    public static final Block InfinityBrown = block();
-    public static final Block InfinityGreen = block();
-    public static final Block InfinityRed = block();
-    public static final Block InfinityBlack = block();
+    public static final Block EndlessWhite = block();
+    public static final Block EndlessOrange = block();
+    public static final Block EndlessMagenta = block();
+    public static final Block EndlessLightBlue = block();
+    public static final Block EndlessYellow = block();
+    public static final Block EndlessLime = block();
+    public static final Block EndlessPink = block();
+    public static final Block EndlessGray = block();
+    public static final Block EndlessLightGray = block();
+    public static final Block EndlessCyan = block();
+    public static final Block EndlessPurple = block();
+    public static final Block EndlessBlue = block();
+    public static final Block EndlessBrown = block();
+    public static final Block EndlessGreen = block();
+    public static final Block EndlessRed = block();
+    public static final Block EndlessBlack = block();
+    public static final Block EndlessWhiteDoor = doorBlock();
+    public static final Block EndlessOrangeDoor = doorBlock();
+    public static final Block EndlessMagentaDoor = doorBlock();
+    public static final Block EndlessLightBlueDoor = doorBlock();
+    public static final Block EndlessYellowDoor = doorBlock();
+    public static final Block EndlessLimeDoor = doorBlock();
+    public static final Block EndlessPinkDoor = doorBlock();
+    public static final Block EndlessGrayDoor = doorBlock();
+    public static final Block EndlessLightGrayDoor = doorBlock();
+    public static final Block EndlessCyanDoor = doorBlock();
+    public static final Block EndlessPurpleDoor = doorBlock();
+    public static final Block EndlessBlueDoor = doorBlock();
+    public static final Block EndlessBrownDoor = doorBlock();
+    public static final Block EndlessGreenDoor = doorBlock();
+    public static final Block EndlessRedDoor = doorBlock();
+    public static final Block EndlessBlackDoor = doorBlock();
 
     public static final ItemGroup INFINITY_GROUP = FabricItemGroupBuilder.build(
-            new Identifier("infinityrooms", "infinityblocks"),
-            () -> new ItemStack(InfinityBlack));
+            new Identifier("infinityrooms", "endlessblocks"),
+            () -> new ItemStack(EndlessBlack));
 
     private static Block block() {
         return new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).requiresTool());
     }
 
+    private static Block doorBlock() {
+        return new EndlessDoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).requiresTool());
+    }
+
     public void register(String id, Block block) {
-        Registry.register(Registry.BLOCK, new Identifier("infinityrooms", "infinity_" + id), block);
-        Registry.register(Registry.ITEM, new Identifier("infinityrooms", "infinity_" + id), new BlockItem(block, new FabricItemSettings().group(INFINITY_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier("infinityrooms", "endless_" + id), block);
+        Registry.register(Registry.ITEM, new Identifier("infinityrooms", "endless_" + id), new BlockItem(block, new FabricItemSettings().group(INFINITY_GROUP)));
     }
 
     @Override
     public void onInitialize() {
-        register("white", InfinityWhite);
-        register("orange", InfinityOrange);
-        register("magenta", InfinityMagenta);
-        register("light_blue", InfinityLightBlue);
-        register("yellow", InfinityYellow);
-        register("lime", InfinityLime);
-        register("pink", InfinityPink);
-        register("gray", InfinityGray);
-        register("light_gray", InfinityLightGray);
-        register("cyan", InfinityCyan);
-        register("purple", InfinityPurple);
-        register("blue", InfinityBlue);
-        register("brown", InfinityBrown);
-        register("green", InfinityGreen);
-        register("red", InfinityRed);
-        register("black", InfinityBlack);
+        register("white", EndlessWhite);
+        register("orange", EndlessOrange);
+        register("magenta", EndlessMagenta);
+        register("light_blue", EndlessLightBlue);
+        register("yellow", EndlessYellow);
+        register("lime", EndlessLime);
+        register("pink", EndlessPink);
+        register("gray", EndlessGray);
+        register("light_gray", EndlessLightGray);
+        register("cyan", EndlessCyan);
+        register("purple", EndlessPurple);
+        register("blue", EndlessBlue);
+        register("brown", EndlessBrown);
+        register("green", EndlessGreen);
+        register("red", EndlessRed);
+        register("black", EndlessBlack);
+        register("white_door", EndlessWhiteDoor);
+        register("orange_door", EndlessOrangeDoor);
+        register("magenta_door", EndlessMagentaDoor);
+        register("light_blue_door", EndlessLightBlueDoor);
+        register("yellow_door", EndlessYellowDoor);
+        register("lime_door", EndlessLimeDoor);
+        register("pink_door", EndlessPinkDoor);
+        register("gray_door", EndlessGrayDoor);
+        register("light_gray_door", EndlessLightGrayDoor);
+        register("cyan_door", EndlessCyanDoor);
+        register("purple_door", EndlessPurpleDoor);
+        register("blue_door", EndlessBlueDoor);
+        register("brown_door", EndlessBrownDoor);
+        register("green_door", EndlessGreenDoor);
+        register("red_door", EndlessRedDoor);
+        register("black_door", EndlessBlackDoor);
     }
 }
