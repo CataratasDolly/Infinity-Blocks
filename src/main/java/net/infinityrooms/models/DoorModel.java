@@ -34,7 +34,6 @@ public class DoorModel extends BlockModel {
     @Override
     public BakedModel bake(ModelLoader loader, Function<SpriteIdentifier, Sprite> textureGetter, ModelBakeSettings rotationContainer, Identifier modelId) {
         SPRITES[0] = textureGetter.apply(SPRITE_IDS[0]);
-
         return this;
     }
 

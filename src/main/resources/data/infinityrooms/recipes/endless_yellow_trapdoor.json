@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "   ",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "infinityrooms:endless_yellow"
+    }
+  },
+  "result": {
+    "item": "infinityrooms:endless_yellow_trapdoor",
+    "count": 2
+  }
+}

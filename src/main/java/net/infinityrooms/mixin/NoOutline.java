@@ -15,7 +15,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import static net.infinityrooms.InfinityRooms.*;
-import static net.infinityrooms.InfinityRooms.EndlessBlackDoor;
 
 @Mixin(GameRenderer.class)
 public class NoOutline {
@@ -36,13 +35,21 @@ public class NoOutline {
             if (lookingAt == EndlessWhite || lookingAt == EndlessOrange || lookingAt == EndlessMagenta || lookingAt == EndlessLightBlue ||
                     lookingAt == EndlessYellow || lookingAt == EndlessLime || lookingAt == EndlessPink || lookingAt == EndlessGray ||
                     lookingAt == EndlessLightGray || lookingAt == EndlessCyan || lookingAt == EndlessPurple || lookingAt == EndlessBlue ||
-                    lookingAt == EndlessBrown || lookingAt == EndlessGreen || lookingAt == EndlessRed || lookingAt == EndlessBlack ||
-                    lookingAt == EndlessWhiteDoor || lookingAt == EndlessOrangeDoor || lookingAt == EndlessMagentaDoor ||
+                    lookingAt == EndlessBrown || lookingAt == EndlessGreen || lookingAt == EndlessRed || lookingAt == EndlessBlack) {
+                cir.setReturnValue(false);
+            } else if (lookingAt == EndlessWhiteDoor || lookingAt == EndlessOrangeDoor || lookingAt == EndlessMagentaDoor ||
                     lookingAt == EndlessLightBlueDoor || lookingAt == EndlessYellowDoor || lookingAt == EndlessLimeDoor ||
                     lookingAt == EndlessPinkDoor || lookingAt == EndlessGrayDoor || lookingAt == EndlessLightGrayDoor ||
                     lookingAt == EndlessCyanDoor || lookingAt == EndlessPurpleDoor || lookingAt == EndlessBlueDoor ||
                     lookingAt == EndlessBrownDoor || lookingAt == EndlessGreenDoor || lookingAt == EndlessRedDoor ||
                     lookingAt == EndlessBlackDoor) {
+                cir.setReturnValue(false);
+            } else if (lookingAt == EndlessWhiteTrapdoor || lookingAt == EndlessOrangeTrapdoor || lookingAt == EndlessMagentaTrapdoor ||
+                    lookingAt == EndlessLightBlueTrapdoor || lookingAt == EndlessYellowTrapdoor || lookingAt == EndlessLimeTrapdoor ||
+                    lookingAt == EndlessPinkTrapdoor || lookingAt == EndlessGrayTrapdoor || lookingAt == EndlessLightGrayTrapdoor ||
+                    lookingAt == EndlessCyanTrapdoor || lookingAt == EndlessPurpleTrapdoor || lookingAt == EndlessBlueTrapdoor ||
+                    lookingAt == EndlessBrownTrapdoor || lookingAt == EndlessGreenTrapdoor || lookingAt == EndlessRedTrapdoor ||
+                    lookingAt == EndlessBlackTrapdoor) {
                 cir.setReturnValue(false);
             }
         }

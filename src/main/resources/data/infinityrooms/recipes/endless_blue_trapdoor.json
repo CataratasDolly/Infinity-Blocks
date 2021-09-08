@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "   ",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "infinityrooms:endless_blue"
+    }
+  },
+  "result": {
+    "item": "infinityrooms:endless_blue_trapdoor",
+    "count": 2
+  }
+}
