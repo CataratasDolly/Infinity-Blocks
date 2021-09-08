@@ -72,11 +72,11 @@ public class InfinityRooms implements ModInitializer {
     }
 
     private static Block doorBlock() {
-        return new EndlessDoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).requiresTool());
+        return new EndlessDoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).breakByTool(FabricItemTags.PICKAXES));
     }
 
     private static Block trapdoorBlock() {
-        return new EndlessTrapdoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).requiresTool());
+        return new EndlessTrapdoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).breakByTool(FabricItemTags.PICKAXES));
     }
 
     public void register(String id, Block block) {
