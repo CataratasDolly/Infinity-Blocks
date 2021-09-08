@@ -30,6 +30,11 @@ public class ModelProvider implements ModelResourceProvider {
                 return new DoorModel(colors.get(i));
             }
         }
+        for (int i = 0; i < 15; i++) {
+            if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_trapdoor_model"))) {
+                return new TrapdoorModel(colors.get(i));
+            }
+        }
         return null;
     }
 }

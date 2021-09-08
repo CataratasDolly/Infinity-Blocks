@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "   ",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "infinityrooms:endless_white"
+    }
+  },
+  "result": {
+    "item": "infinityrooms:endless_white_trapdoor",
+    "count": 2
+  }
+}
