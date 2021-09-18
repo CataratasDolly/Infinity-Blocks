@@ -30,26 +30,28 @@ public class NoOutline {
             BlockPos blockPos = ((BlockHitResult) hitResult).getBlockPos();
             assert this.client.world != null;
             BlockState blockState = this.client.world.getBlockState(blockPos);
-            Block lookingAt = blockState.getBlock();
+            Block see = blockState.getBlock();
 
-            if (lookingAt == EndlessWhite || lookingAt == EndlessOrange || lookingAt == EndlessMagenta || lookingAt == EndlessLightBlue ||
-                    lookingAt == EndlessYellow || lookingAt == EndlessLime || lookingAt == EndlessPink || lookingAt == EndlessGray ||
-                    lookingAt == EndlessLightGray || lookingAt == EndlessCyan || lookingAt == EndlessPurple || lookingAt == EndlessBlue ||
-                    lookingAt == EndlessBrown || lookingAt == EndlessGreen || lookingAt == EndlessRed || lookingAt == EndlessBlack) {
-                cir.setReturnValue(false);
-            } else if (lookingAt == EndlessWhiteDoor || lookingAt == EndlessOrangeDoor || lookingAt == EndlessMagentaDoor ||
-                    lookingAt == EndlessLightBlueDoor || lookingAt == EndlessYellowDoor || lookingAt == EndlessLimeDoor ||
-                    lookingAt == EndlessPinkDoor || lookingAt == EndlessGrayDoor || lookingAt == EndlessLightGrayDoor ||
-                    lookingAt == EndlessCyanDoor || lookingAt == EndlessPurpleDoor || lookingAt == EndlessBlueDoor ||
-                    lookingAt == EndlessBrownDoor || lookingAt == EndlessGreenDoor || lookingAt == EndlessRedDoor ||
-                    lookingAt == EndlessBlackDoor) {
-                cir.setReturnValue(false);
-            } else if (lookingAt == EndlessWhiteTrapdoor || lookingAt == EndlessOrangeTrapdoor || lookingAt == EndlessMagentaTrapdoor ||
-                    lookingAt == EndlessLightBlueTrapdoor || lookingAt == EndlessYellowTrapdoor || lookingAt == EndlessLimeTrapdoor ||
-                    lookingAt == EndlessPinkTrapdoor || lookingAt == EndlessGrayTrapdoor || lookingAt == EndlessLightGrayTrapdoor ||
-                    lookingAt == EndlessCyanTrapdoor || lookingAt == EndlessPurpleTrapdoor || lookingAt == EndlessBlueTrapdoor ||
-                    lookingAt == EndlessBrownTrapdoor || lookingAt == EndlessGreenTrapdoor || lookingAt == EndlessRedTrapdoor ||
-                    lookingAt == EndlessBlackTrapdoor) {
+            if (see == EndlessWhite || see == EndlessOrange || see == EndlessMagenta || see == EndlessLightBlue ||
+                    see == EndlessYellow || see == EndlessLime || see == EndlessPink || see == EndlessGray ||
+                    see == EndlessLightGray || see == EndlessCyan || see == EndlessPurple || see == EndlessBlue ||
+                    see == EndlessBrown || see == EndlessGreen || see == EndlessRed || see == EndlessBlack ||
+                    see == EndlessWhiteDoor || see == EndlessOrangeDoor || see == EndlessMagentaDoor ||
+                    see == EndlessLightBlueDoor || see == EndlessYellowDoor || see == EndlessLimeDoor ||
+                    see == EndlessPinkDoor || see == EndlessGrayDoor || see == EndlessLightGrayDoor ||
+                    see == EndlessCyanDoor || see == EndlessPurpleDoor || see == EndlessBlueDoor ||
+                    see == EndlessBrownDoor || see == EndlessGreenDoor || see == EndlessRedDoor ||
+                    see == EndlessBlackDoor || see == EndlessWhiteTrapdoor || see == EndlessOrangeTrapdoor ||
+                    see == EndlessMagentaTrapdoor || see == EndlessLightBlueTrapdoor || see == EndlessYellowTrapdoor ||
+                    see == EndlessLimeTrapdoor || see == EndlessPinkTrapdoor || see == EndlessGrayTrapdoor ||
+                    see == EndlessLightGrayTrapdoor || see == EndlessCyanTrapdoor || see == EndlessPurpleTrapdoor ||
+                    see == EndlessBlueTrapdoor || see == EndlessBrownTrapdoor || see == EndlessGreenTrapdoor ||
+                    see == EndlessRedTrapdoor || see == EndlessBlackTrapdoor || see == EndlessWhiteButton ||
+                    see == EndlessOrangeButton || see == EndlessMagentaButton || see == EndlessLightBlueButton ||
+                    see == EndlessYellowButton || see == EndlessLimeButton || see == EndlessPinkButton ||
+                    see == EndlessBlueButton || see == EndlessBrownButton || see == EndlessGreenButton ||
+                    see == EndlessRedButton || see == EndlessBlackButton || see == EndlessGrayButton ||
+                    see == EndlessLightGrayButton || see == EndlessCyanButton || see == EndlessPurpleButton) {
                 cir.setReturnValue(false);
             }
         }

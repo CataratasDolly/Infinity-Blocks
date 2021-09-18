@@ -62,6 +62,22 @@ public class InfinityRooms implements ModInitializer {
     public static final Block EndlessGreenTrapdoor = trapdoorBlock();
     public static final Block EndlessRedTrapdoor = trapdoorBlock();
     public static final Block EndlessBlackTrapdoor = trapdoorBlock();
+    public static final Block EndlessWhiteButton = buttonBlock();
+    public static final Block EndlessOrangeButton = buttonBlock();
+    public static final Block EndlessMagentaButton = buttonBlock();
+    public static final Block EndlessLightBlueButton = buttonBlock();
+    public static final Block EndlessYellowButton = buttonBlock();
+    public static final Block EndlessLimeButton = buttonBlock();
+    public static final Block EndlessPinkButton = buttonBlock();
+    public static final Block EndlessGrayButton = buttonBlock();
+    public static final Block EndlessLightGrayButton = buttonBlock();
+    public static final Block EndlessCyanButton = buttonBlock();
+    public static final Block EndlessPurpleButton = buttonBlock();
+    public static final Block EndlessBlueButton = buttonBlock();
+    public static final Block EndlessBrownButton = buttonBlock();
+    public static final Block EndlessGreenButton = buttonBlock();
+    public static final Block EndlessRedButton = buttonBlock();
+    public static final Block EndlessBlackButton = buttonBlock();
 
     public static final ItemGroup INFINITY_GROUP = FabricItemGroupBuilder.build(
             new Identifier("infinityrooms", "endlessblocks"),
@@ -77,6 +93,10 @@ public class InfinityRooms implements ModInitializer {
 
     private static Block trapdoorBlock() {
         return new EndlessTrapdoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).breakByTool(FabricItemTags.PICKAXES));
+    }
+
+    private static Block buttonBlock() {
+        return new EndlessButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).noCollision().luminance(15).breakByTool(FabricItemTags.PICKAXES));
     }
 
     public void register(String id, Block block) {
@@ -134,5 +154,21 @@ public class InfinityRooms implements ModInitializer {
         register("green_trapdoor", EndlessGreenTrapdoor);
         register("red_trapdoor", EndlessRedTrapdoor);
         register("black_trapdoor", EndlessBlackTrapdoor);
+        register("white_button", EndlessWhiteButton);
+        register("orange_button", EndlessOrangeButton);
+        register("magenta_button", EndlessMagentaButton);
+        register("light_blue_button", EndlessLightBlueButton);
+        register("yellow_button", EndlessYellowButton);
+        register("lime_button", EndlessLimeButton);
+        register("pink_button", EndlessPinkButton);
+        register("gray_button", EndlessGrayButton);
+        register("light_gray_button", EndlessLightGrayButton);
+        register("cyan_button", EndlessCyanButton);
+        register("purple_button", EndlessPurpleButton);
+        register("blue_button", EndlessBlueButton);
+        register("brown_button", EndlessBrownButton);
+        register("green_button", EndlessGreenButton);
+        register("red_button", EndlessRedButton);
+        register("black_button", EndlessBlackButton);
     }
 }

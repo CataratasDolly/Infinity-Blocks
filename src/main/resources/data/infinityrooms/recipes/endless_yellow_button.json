@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinityrooms:endless_yellow"
+    }
+  ],
+  "result": {
+    "item": "infinityrooms:endless_yellow_button",
+    "count": 1
+  }
+}

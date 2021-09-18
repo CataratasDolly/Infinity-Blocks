@@ -3,6 +3,7 @@ package net.infinityrooms;
 import net.fabricmc.fabric.api.client.model.ModelProviderContext;
 import net.fabricmc.fabric.api.client.model.ModelResourceProvider;
 import net.infinityrooms.models.BlockModel;
+import net.infinityrooms.models.ButtonModel;
 import net.infinityrooms.models.DoorModel;
 import net.infinityrooms.models.TrapdoorModel;
 import net.minecraft.client.render.model.UnbakedModel;
@@ -24,16 +25,12 @@ public class ModelProvider implements ModelResourceProvider {
             if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_model")) ||
             identifier.equals(new Identifier("infinityrooms:item/endless_" + colors.get(i)))) {
                 return new BlockModel(colors.get(i));
-            }
-        }
-        for (int i = 0; i < 15; i++) {
-            if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_door_model"))) {
+            } else if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_door_model"))) {
                 return new DoorModel(colors.get(i));
-            }
-        }
-        for (int i = 0; i < 15; i++) {
-            if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_trapdoor_model"))) {
+            } else if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_trapdoor_model"))) {
                 return new TrapdoorModel(colors.get(i));
+            } else if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_button_model"))) {
+                return new ButtonModel(colors.get(i));
             }
         }
         return null;

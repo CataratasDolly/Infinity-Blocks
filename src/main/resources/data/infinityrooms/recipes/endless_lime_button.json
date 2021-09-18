@@ -1,0 +1,12 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinityrooms:endless_lime"
+    }
+  ],
+  "result": {
+    "item": "infinityrooms:endless_lime_button",
+    "count": 1
+  }
+}

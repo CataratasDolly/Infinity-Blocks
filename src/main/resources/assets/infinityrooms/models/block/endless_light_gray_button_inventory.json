@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "infinityrooms:block/endless_light_gray"
+  }
+}
