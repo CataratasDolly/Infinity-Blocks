@@ -6,11 +6,20 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tag.FabricItemTags;
 import net.minecraft.block.*;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.screen.ingame.InventoryScreen;
+import net.minecraft.client.render.DiffuseLighting;
+import net.minecraft.client.render.model.json.JsonUnbakedModel;
+import net.minecraft.data.server.ItemTagsProvider;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.chunk.light.LightingProvider;
 
 public class InfinityRooms implements ModInitializer {
 
@@ -78,6 +87,22 @@ public class InfinityRooms implements ModInitializer {
     public static final Block EndlessGreenButton = buttonBlock();
     public static final Block EndlessRedButton = buttonBlock();
     public static final Block EndlessBlackButton = buttonBlock();
+    public static final Block EndlessWhitePressurePlate = pressurePlateBlock();
+    public static final Block EndlessOrangePressurePlate = pressurePlateBlock();
+    public static final Block EndlessMagentaPressurePlate = pressurePlateBlock();
+    public static final Block EndlessLightBluePressurePlate = pressurePlateBlock();
+    public static final Block EndlessYellowPressurePlate = pressurePlateBlock();
+    public static final Block EndlessLimePressurePlate = pressurePlateBlock();
+    public static final Block EndlessPinkPressurePlate = pressurePlateBlock();
+    public static final Block EndlessGrayPressurePlate = pressurePlateBlock();
+    public static final Block EndlessLightGrayPressurePlate = pressurePlateBlock();
+    public static final Block EndlessCyanPressurePlate = pressurePlateBlock();
+    public static final Block EndlessPurplePressurePlate = pressurePlateBlock();
+    public static final Block EndlessBluePressurePlate = pressurePlateBlock();
+    public static final Block EndlessBrownPressurePlate = pressurePlateBlock();
+    public static final Block EndlessGreenPressurePlate = pressurePlateBlock();
+    public static final Block EndlessRedPressurePlate = pressurePlateBlock();
+    public static final Block EndlessBlackPressurePlate = pressurePlateBlock();
 
     public static final ItemGroup INFINITY_GROUP = FabricItemGroupBuilder.build(
             new Identifier("infinityrooms", "endlessblocks"),
@@ -97,6 +122,11 @@ public class InfinityRooms implements ModInitializer {
 
     private static Block buttonBlock() {
         return new EndlessButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).noCollision().luminance(15).breakByTool(FabricItemTags.PICKAXES));
+    }
+
+    private static Block pressurePlateBlock() {
+        return new EndlessPressurePlate(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(0.5f).noCollision().luminance(15)
+                .breakByTool(FabricItemTags.PICKAXES).requiresTool());
     }
 
     public void register(String id, Block block) {
@@ -170,5 +200,21 @@ public class InfinityRooms implements ModInitializer {
         register("green_button", EndlessGreenButton);
         register("red_button", EndlessRedButton);
         register("black_button", EndlessBlackButton);
+        register("white_pressure_plate", EndlessWhitePressurePlate);
+        register("orange_pressure_plate", EndlessOrangePressurePlate);
+        register("magenta_pressure_plate", EndlessMagentaPressurePlate);
+        register("light_blue_pressure_plate", EndlessLightBluePressurePlate);
+        register("yellow_pressure_plate", EndlessYellowPressurePlate);
+        register("lime_pressure_plate", EndlessLimePressurePlate);
+        register("pink_pressure_plate", EndlessPinkPressurePlate);
+        register("gray_pressure_plate", EndlessGrayPressurePlate);
+        register("light_gray_pressure_plate", EndlessLightGrayPressurePlate);
+        register("cyan_pressure_plate", EndlessCyanPressurePlate);
+        register("purple_pressure_plate", EndlessPurplePressurePlate);
+        register("blue_pressure_plate", EndlessBluePressurePlate);
+        register("brown_pressure_plate", EndlessBrownPressurePlate);
+        register("green_pressure_plate", EndlessGreenPressurePlate);
+        register("red_pressure_plate", EndlessRedPressurePlate);
+        register("black_pressure_plate", EndlessBlackPressurePlate);
     }
 }

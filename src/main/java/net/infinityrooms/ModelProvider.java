@@ -2,10 +2,7 @@ package net.infinityrooms;
 
 import net.fabricmc.fabric.api.client.model.ModelProviderContext;
 import net.fabricmc.fabric.api.client.model.ModelResourceProvider;
-import net.infinityrooms.models.BlockModel;
-import net.infinityrooms.models.ButtonModel;
-import net.infinityrooms.models.DoorModel;
-import net.infinityrooms.models.TrapdoorModel;
+import net.infinityrooms.models.*;
 import net.minecraft.client.render.model.UnbakedModel;
 import net.minecraft.util.Identifier;
 
@@ -31,6 +28,8 @@ public class ModelProvider implements ModelResourceProvider {
                 return new TrapdoorModel(colors.get(i));
             } else if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_button_model"))) {
                 return new ButtonModel(colors.get(i));
+            } else if (identifier.equals(new Identifier("infinityrooms:block/endless_" + colors.get(i) + "_pressure_plate_model"))) {
+                return new PressurePlateModel(colors.get(i));
             }
         }
         return null;

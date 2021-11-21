@@ -51,7 +51,13 @@ public class NoOutline {
                     see == EndlessYellowButton || see == EndlessLimeButton || see == EndlessPinkButton ||
                     see == EndlessBlueButton || see == EndlessBrownButton || see == EndlessGreenButton ||
                     see == EndlessRedButton || see == EndlessBlackButton || see == EndlessGrayButton ||
-                    see == EndlessLightGrayButton || see == EndlessCyanButton || see == EndlessPurpleButton) {
+                    see == EndlessLightGrayButton || see == EndlessCyanButton || see == EndlessPurpleButton ||
+                    see == EndlessWhitePressurePlate || see == EndlessOrangePressurePlate || see == EndlessMagentaPressurePlate ||
+                    see == EndlessLightBluePressurePlate || see == EndlessLimePressurePlate || see == EndlessPinkPressurePlate ||
+                    see == EndlessRedPressurePlate || see == EndlessGreenPressurePlate || see == EndlessLightGrayPressurePlate ||
+                    see == EndlessGrayPressurePlate || see == EndlessCyanPressurePlate || see == EndlessPurplePressurePlate ||
+                    see == EndlessBluePressurePlate || see == EndlessYellowPressurePlate || see == EndlessBrownPressurePlate ||
+                    see == EndlessBlackPressurePlate) {
                 cir.setReturnValue(false);
             }
         }

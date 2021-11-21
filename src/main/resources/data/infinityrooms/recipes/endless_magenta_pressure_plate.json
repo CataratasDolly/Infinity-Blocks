@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "infinityrooms:endless_magenta"
+    }
+  },
+  "result": {
+    "item": "infinityrooms:endless_magenta_pressure_plate"
+  }
+}

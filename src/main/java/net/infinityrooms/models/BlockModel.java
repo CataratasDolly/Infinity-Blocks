@@ -11,6 +11,7 @@ import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
 import net.fabricmc.fabric.api.renderer.v1.model.FabricBakedModel;
 import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.render.DiffuseLighting;
 import net.minecraft.client.render.model.*;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import net.minecraft.client.render.model.json.ModelOverrideList;
@@ -128,5 +129,6 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
     @Override
     public void emitItemQuads(ItemStack itemStack, Supplier<Random> supplier, RenderContext renderContext) {
         renderContext.meshConsumer().accept(mesh);
+        DiffuseLighting.disableGuiDepthLighting();
     }
 }
