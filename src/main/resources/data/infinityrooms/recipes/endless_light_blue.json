@@ -1,20 +1,23 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WWW",
-    "WRW",
-    "WWW"
+    "IGI",
+    "GCG",
+    "IGI"
   ],
   "key": {
-    "W": {
-      "item": "minecraft:light_blue_concrete"
+    "I": {
+      "item": "minecraft:glow_ink_sac"
     },
-    "R": {
-      "item": "minecraft:glowstone_dust"
+    "G": {
+      "item": "minecraft:glowstone"
+    },
+    "C": {
+      "item": "minecraft:light_blue_concrete"
     }
   },
   "result": {
     "item": "infinityrooms:endless_light_blue",
-    "count": 8
+    "count": 1
   }
 }
