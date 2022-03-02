@@ -4,22 +4,12 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.tag.FabricItemTags;
 import net.minecraft.block.*;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.ingame.InventoryScreen;
-import net.minecraft.client.render.DiffuseLighting;
-import net.minecraft.client.render.model.json.JsonUnbakedModel;
-import net.minecraft.data.server.ItemTagsProvider;
-import net.minecraft.inventory.Inventory;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.tag.ItemTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.chunk.light.LightingProvider;
 
 public class InfinityRooms implements ModInitializer {
 
@@ -109,24 +99,24 @@ public class InfinityRooms implements ModInitializer {
             () -> new ItemStack(EndlessBlack));
 
     private static Block block() {
-        return new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).requiresTool().breakByTool(FabricItemTags.PICKAXES));
+        return new Block(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).requiresTool());
     }
 
     private static Block doorBlock() {
-        return new EndlessDoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).breakByTool(FabricItemTags.PICKAXES));
+        return new EndlessDoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15));
     }
 
     private static Block trapdoorBlock() {
-        return new EndlessTrapdoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15).breakByTool(FabricItemTags.PICKAXES));
+        return new EndlessTrapdoor(FabricBlockSettings.of(Material.STONE).strength(1.5f, 6.0f).luminance(15));
     }
 
     private static Block buttonBlock() {
-        return new EndlessButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).noCollision().luminance(15).breakByTool(FabricItemTags.PICKAXES));
+        return new EndlessButton(FabricBlockSettings.of(Material.DECORATION).strength(0.5f).noCollision().luminance(15));
     }
 
     private static Block pressurePlateBlock() {
-        return new EndlessPressurePlate(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE).strength(0.5f).noCollision().luminance(15)
-                .breakByTool(FabricItemTags.PICKAXES).requiresTool());
+        return new EndlessPressurePlate(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE)
+                .strength(0.5f).noCollision().luminance(15).requiresTool());
     }
 
     public void register(String id, Block block) {
