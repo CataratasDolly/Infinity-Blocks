@@ -129,6 +129,6 @@ public class BlockModel implements UnbakedModel, BakedModel, FabricBakedModel {
     @Override
     public void emitItemQuads(ItemStack itemStack, Supplier<Random> supplier, RenderContext renderContext) {
         renderContext.meshConsumer().accept(mesh);
-        DiffuseLighting.disableGuiDepthLighting();
+        // DiffuseLighting.disableGuiDepthLighting();
     }
 }
