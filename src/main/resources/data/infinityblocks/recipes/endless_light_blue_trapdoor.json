@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "infinityblocks:endless_light_blue"
+    }
+  },
+  "result": {
+    "item": "infinityblocks:endless_light_blue_trapdoor",
+    "count": 2
+  }
+}

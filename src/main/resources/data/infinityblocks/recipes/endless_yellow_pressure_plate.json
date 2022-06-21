@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "infinityblocks:endless_yellow"
+    }
+  },
+  "result": {
+    "item": "infinityblocks:endless_yellow_pressure_plate"
+  }
+}

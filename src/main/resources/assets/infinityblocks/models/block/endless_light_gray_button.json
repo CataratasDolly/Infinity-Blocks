@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "infinityblocks:block/endless_light_gray"
+  }
+}

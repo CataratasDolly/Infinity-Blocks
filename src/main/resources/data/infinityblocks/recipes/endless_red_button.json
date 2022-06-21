@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinityblocks:endless_red"
+    }
+  ],
+  "result": {
+    "item": "infinityblocks:endless_red_button",
+    "count": 1
+  }
+}

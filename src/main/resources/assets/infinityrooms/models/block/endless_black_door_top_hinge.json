@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_rh",
-  "textures": {
-    "top": "infinityrooms:block/endless_black",
-    "bottom": "infinityrooms:block/endless_black"
-  }
-}

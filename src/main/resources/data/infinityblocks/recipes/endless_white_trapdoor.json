@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "infinityblocks:endless_white"
+    }
+  },
+  "result": {
+    "item": "infinityblocks:endless_white_trapdoor",
+    "count": 2
+  }
+}

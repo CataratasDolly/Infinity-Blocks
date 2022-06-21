@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "infinityrooms",
+  "id": "infinityblocks",
   "version": "${version}",
-  "name": "Infinity Rooms",
+  "name": "Infinity Blocks",
   "description": "",
   "authors": [
     "CataratasDolly"
@@ -12,18 +12,18 @@
   "icon": "icon.png",
   "entrypoints": {
     "client": [
-      "net.infinityrooms.client.InfinityRoomsClient"
+      "net.infinityblocks.client.InfinityBlocksClient"
     ],
     "main": [
-      "net.infinityrooms.InfinityRooms"
+      "net.infinityblocks.InfinityBlocks"
     ]
   },
   "mixins": [
-    "InfinityRooms.mixins.json"
+    "InfinityBlocks.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": ">=0.14.7",
     "fabric": "*",
-    "minecraft": "1.18.2"
+    "minecraft": "1.19.x"
   }
 }

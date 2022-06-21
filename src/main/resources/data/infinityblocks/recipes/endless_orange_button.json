@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "infinityblocks:endless_orange"
+    }
+  ],
+  "result": {
+    "item": "infinityblocks:endless_orange_button",
+    "count": 1
+  }
+}

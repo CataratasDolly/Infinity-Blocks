@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.infinityblocks.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "NoOutline"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
